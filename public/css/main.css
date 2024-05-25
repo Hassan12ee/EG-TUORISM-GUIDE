@@ -1,0 +1,151 @@
+.c-item {
+    height: 450px;
+}
+
+.c-img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.img {
+    width: 100%;
+}
+
+.p-80 {
+    padding: 70px 0;
+}
+
+.headline {
+
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.card {
+    margin: 20px 0;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.form-control {
+    margin-bottom: 10px;
+}
+
+.signbtn {
+    width: 100%;
+}
+
+.signupform {
+    max-width: 500px;
+    padding: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.signupdad {
+
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Page {
+    align-items: center;
+    justify-content: center;
+}
+
+.headsi {
+    text-align: center;
+
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+.headsi .h1 {
+    font-size: 16px;
+
+}
+
+.jjj {
+    height: 450px;
+}
+
+.ggg {
+    padding: 20px 0;
+}
+
+.ggg .txt {
+
+    padding-bottom: 10px;
+}
+
+.hhh {
+    padding: 40px 0;
+}
+
+.footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 40px 0;
+    width: 100%;
+}
+
+.footer h4 {
+    color: #f8f9fa;
+}
+
+.footer a {
+    color: #f8f9fa;
+    text-decoration: none;
+}
+
+
+.footer a:hover {
+    color: #007bff;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.recom {
+    padding: 30px 0;
+    text-align: center;
+
+}
+
+.recom .recom2 {
+    padding: 50px 80px;
+    font-size: 25px;
+    background-color: red;
+}
+
+.ink {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ink .imgtest {
+    width: 20%;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
