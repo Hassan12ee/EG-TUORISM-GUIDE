@@ -24,7 +24,7 @@
             <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                 <div class="container">
                     <a class="navbar-brand" href="{{ route('index') }}">
-                        <img src="img/Project Logo-1.png" alt="logo">
+                        <img src="{{ URL::asset('img/Project Logo-1.png') }}" alt="logo">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -148,7 +148,7 @@
     <!--------------------------------------------------------------------------------->
     <script src="{{ Url::asset('js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ Url::asset('js/main.js') }}"></script>
-   
+
 </body>
 
 </html>

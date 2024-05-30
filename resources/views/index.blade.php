@@ -26,7 +26,7 @@
         </div>
     </section>
     <div class="recom">
-        <a href="{{ route('Tourplaces') }}" class="btn btn-primary recom2">Recommended for me</a>
+        <a href="{{ route('Recommended') }}" class="btn btn-primary recom2">Recommended for me</a>
     </div>
 
     <section class="items p-80">

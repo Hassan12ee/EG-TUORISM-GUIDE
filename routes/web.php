@@ -24,7 +24,7 @@ Route::get('/restaurants', [App\Http\Controllers\services\restaurantscontroller:
 Route::get('/restaurants/Content/{restaurants_id}', [App\Http\Controllers\services\restaurantscontroller::class, 'getrestaurants']);
 Route::get('/Tourplaces', [App\Http\Controllers\services\tourist_placesController::class, 'getdetails'])->name('Tourplaces');
 Route::get('/Tourplaces/Content/{Tourplaces_id}', [App\Http\Controllers\services\tourist_placesController::class, 'gettourist_places']);
-
+Route::get('/Recommended', [App\Http\Controllers\services\RecommendedController::class, 'getRecommended'])->name('Recommended');
 Route::get('/redirect/{service}', [App\Http\Controllers\SocialController::class, 'redirect']);
 
 Route::get('/callback/{service}', [App\Http\Controllers\SocialController::class, 'callback']);
