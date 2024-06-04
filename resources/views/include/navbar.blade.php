@@ -14,8 +14,10 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
+
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}">
+
 </head>
 <body>
 
@@ -146,8 +148,11 @@
         </div>
     </footer>
     <!--------------------------------------------------------------------------------->
+
     <script src="{{ Url::asset('js/bootstrap.bundle.min.js') }}"></script>
+    
     <script src="{{ Url::asset('js/main.js') }}"></script>
+
 
 </body>
 

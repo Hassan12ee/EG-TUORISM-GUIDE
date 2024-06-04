@@ -10,7 +10,7 @@ class restaurantscontroller extends Controller
 {
     public function getdetails()
     {
-      $view=  restaurant::select('id','name','imgpath','small_details',) ->get();
+      $view=  restaurant::select('id','name','imgpath','small_details',) ->paginate(PAGINATION_COUNT);
 
 
 

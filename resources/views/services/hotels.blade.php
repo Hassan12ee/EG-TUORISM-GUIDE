@@ -1,6 +1,6 @@
 @extends('include.navbar')
 @section('content')
-<section class="items p-80">
+<section >
     <div class="container">
        <div class="headline d-flex text-centre ">
           <h1>Hotels</h1>
@@ -12,29 +12,30 @@
 
 
 
-@foreach ($view as $view )
+@foreach ($view as $views )
 
 
 
              <div class="col-lg-3 col-md-6">
                 <div class="card">
-                   <img src="{{URL::asset($view -> imgpath)}}" class="card-img-top" alt="...">
+                   <img src="{{URL::asset($views -> imgpath)}}" class="card-img-top" alt="...">
                    <div class="card-body">
-                      <h5 class="card-title">{{$view -> nameh}}</h5>
-                      <p class="card-text">{{$view -> smalldetails}}</p>
+                      <h5 class="card-title">{{$views -> nameh}}</h5>
+                      <p class="card-text">{{$views -> smalldetails}}</p>
 
-                      <a href="{{ url('hotels/Content/'.$view -> id ) }}" class="btn btn-primary">see more</a>
+                      <a href="{{ url('hotels/Content/'.$views -> id ) }}" class="btn btn-primary">see more</a>
                    </div>
 
                 </div>
              </div>
              @endforeach
+<div class="d-flex justify-content-center">
+                {{ $view -> links() }}
+
+            </div>
+
        </div>
-
-
-
-
-
     </div>
+
 </section>
 @endsection

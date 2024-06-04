@@ -10,7 +10,7 @@ class tourist_placesController extends Controller
 {
     public function getdetails()
     {
-      $view=  tourist_place::select('T-name','imgpath','small_details') ->get();
+      $view=  tourist_place::select('T-name','imgpath','small_details') ->paginate(PAGINATION_COUNT);
 
 
 

@@ -3,13 +3,14 @@
 namespace App\Http\Controllers\services;
 use App\Http\Controllers\Controller;
 use App\Models\hotel;
-use Illuminate\Http\Request;
+use Illuminate\View\View;
+
 
 class controllerHotel extends Controller
 {
     public function getdetails()
     {
-      $view=  hotel::select('nameh','imgpath','smalldetails','id') ->get();
+      $view=  hotel::select('nameh','imgpath','smalldetails','id') ->paginate(PAGINATION_COUNT);
 
 
 
