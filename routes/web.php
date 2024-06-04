@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Auth;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 define('PAGINATION_COUNT', 16);
 Auth::routes(['verify'=> true]);
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
@@ -25,9 +26,6 @@ Route::get('/restaurants/Content/{restaurants_id}', [App\Http\Controllers\servic
 Route::get('/Tourplaces', [App\Http\Controllers\services\tourist_placesController::class, 'getdetails'])->name('Tourplaces');
 Route::get('/Tourplaces/Content/{Tourplaces_id}', [App\Http\Controllers\services\tourist_placesController::class, 'gettourist_places']);
 Route::get('/Recommended', [App\Http\Controllers\services\RecommendedController::class, 'getRecommended'])->name('Recommended');
-Route::get('/redirect/{service}', [App\Http\Controllers\SocialController::class, 'redirect']);
-
-Route::get('/callback/{service}', [App\Http\Controllers\SocialController::class, 'callback']);
 
 
 
