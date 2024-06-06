@@ -23,7 +23,7 @@
 
     <header>
         <div id="app">
-            <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm bg-nav">
                 <div class="container">
                     <a class="navbar-brand" href="{{ route('index') }}">
                         <img src="{{ URL::asset('img/Project Logo-1.png') }}" alt="logo">
@@ -115,11 +115,11 @@
         </div>
     </header>
     <!---------------------------------------المحتوى------------------------------------>
-    <main class="py-4">
+    <main>
         @yield('content')
     </main>
     <!---------------------------------------------------------------------------------->
-    <!----------------------------------------footer------------------------------------>
+    <!------------------------------------------footer------------------------------------>
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -130,15 +130,15 @@
                 </div>
                 <div class="col-md-3">
                     <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="{{ route('index') }}">Home</a></li>
-                        <li><a href="{{ route('Tourplaces') }}">Tour places</a></li>
-                        <li><a href="{{ route('hotels') }}">Hotels</a></li>
-                        <li><a href="{{ route('restaurants') }}">Restaurants</a></li>
-                        <li><a href="{{ route('ourplans') }}">Our plans</a></li>
-                        <li><a href="{{ route('ourplans') }}">Activities</a></li>
+                    <div class="row">
+                        <div class="col-md-4" ><a href="{{ route('index') }}">Home</a></div>
+                        <div class="col-md-4" ><a href="{{ route('Tourplaces') }}">Tour places</a></div>
+                        <div class="col-md-4" ><a href="{{ route('hotels') }}">Hotels</a></div>
+                        <div class="col-md-4" ><a href="{{ route('restaurants') }}">Restaurants</a></div>
+                        <div class="col-md-4" ><a href="{{ route('ourplans') }}">Our plans</a></div>
+                        <div class="col-md-4" ><a href="{{ route('ourplans') }}">Activities</a></div>
+                    </div>
 
-                    </ul>
                 </div>
                 <div class="col-md-3">
                     <h4>Contact Us</h4>
@@ -150,7 +150,7 @@
     <!--------------------------------------------------------------------------------->
 
     <script src="{{ Url::asset('js/bootstrap.bundle.min.js') }}"></script>
-    
+
     <script src="{{ Url::asset('js/main.js') }}"></script>
 
 

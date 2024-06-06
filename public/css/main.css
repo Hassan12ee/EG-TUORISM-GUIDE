@@ -1,20 +1,68 @@
 
-.c-item {
-    height: 450px;
+.bg-nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 999;
 }
-
-.c-img {
-    height: 100%;
-    object-fit: cover;
+.big-font
+{
+font-size: 62px;
 }
+.bg-1
+{
+    background-image: url('../img/file_2024-02-28_00.39.19.png');
+    background-size: cover;
+    height: 100vh;
+    background-position: 50% 50%;
+}
+.bg-2
+{
+    background-image: url('../img/ravel-elements.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-position: 50% 50%;
+}
+.bg-3
+{
+    background-image: url('../img/two-athletic-man-floats-red-boat-river.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-position: 50% 50%;
+}
+.homeLayer{
 
-.img {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.layerContent{
+
+    color: white;
+    text-align: center;
     width: 100%;
+    height: 50%;
+    display: flex;
+
+
+
 }
 
-.p-80 {
-    padding: 70px 0;
-}
+
+
+
+
+
+
 
 .headline {
 
@@ -141,12 +189,4 @@
 
 .ink .imgtest {
     width: 20%;
-}
-
-.header {
-    width: 100%;
-    height: 50px;
-    position: fixed;
-    top: 0;
-    left: 0;
 }

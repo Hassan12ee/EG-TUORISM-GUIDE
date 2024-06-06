@@ -5,14 +5,45 @@
 
         <div id="carouselExample" class="carousel slide">
             <div class="carousel-inner">
-                <div class="carousel-item active c-item">
-                    <img src="img/file_2024-02-28_00.39.19.png" class="d-block w-100 c-img">
+                <div class="carousel-item active bg-1">
+                    <div class="homeLayer">
+                        <div class="layerContent d-flex flex-column justify-content-center">
+                            <h1 class="big-font">Special Trip</h1>
+                            <p class="h4">We can recommend your journey for you based on your choice</p>
+                            <div>
+                                <a href="{{ route('Recommended') }}" class="btn btn-primary mt-5 p-3 "><p class="h5" >Recommend for me</p></a>
+                            </div>
+                        </div>
+                      </div>
                 </div>
-                <div class="carousel-item c-item">
-                    <img src="img/file_2024-02-28_00.40.16.png" class="d-block w-100 c-img">
+                <div class="carousel-item bg-2">
+                    <div class="homeLayer">
+                        <div class="layerContent d-flex flex-column justify-content-center">
+
+
+
+                                    <h1 class="big-font">Our plans</h1>
+                                    <p class="h4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, maxime.</p>
+                                    <div>
+                                    <a href="{{ route('ourplans') }}" class="btn btn-primary mt-5 p-3"><p class="h5" >See Our plans</p></a>
+                                </div>
+
+                        </div>
+                      </div>
                 </div>
-                <div class="carousel-item c-item">
-                    <img src="img/file_2024-02-28_00.41.59.png" class="d-block w-100 c-img">
+                <div class="carousel-item bg-3">
+                    <div class="homeLayer">
+                        <div class="layerContent d-flex flex-column justify-content-center">
+                            <h1 class="big-font">Activities</h1>
+                            <p class="h4">We can recommend your journey for you based on your choice</p>
+                            <div class="">
+                                <a href="{{ route('restaurants') }}" class="btn btn-primary mt-5 p-3"><p class="h5" >See Our Activities</p></a>
+                            </div>
+
+
+
+                        </div>
+                      </div>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -25,11 +56,9 @@
             </button>
         </div>
     </section>
-    <div class="recom">
-        <a href="{{ route('Recommended') }}" class="btn btn-primary recom2">Recommended for me</a>
-    </div>
 
-    <section class="items p-80">
+
+    <section class="items">
         <div class="container">
             <div class="headline d-flex text-centre ">
                 <h1>Tour places</h1>
@@ -88,16 +117,17 @@
         </div>
     </section>
 
-    <section class="items p-80">
+    <section class="items ">
         <div class="container">
             <div class="headline d-flex text-centre ">
                 <h1>Hotels</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, maxime.</p>
                 <a href="{{ route('hotels') }}" class="btn btn-primary">See More</a>
             </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="card">
+            <div >
+                <div class="row">
+                <div class="col-lg-3 col-md-6 ">
+                    <div class="card h-100">
                         <img src="img/273680842.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Grand Nile hotel </h5>
@@ -109,8 +139,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="card">
+                <div class="col-lg-3 col-md-6 ">
+                    <div class="card h-100">
                         <img src="img/469090348z.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Central cairo hotel</h5>
@@ -120,13 +150,13 @@
                                 internet
 
                             </p>
-                            <a href="hotel2.php" class="btn btn-primary">Go somewhere</a>
+                            <a href="hotel2.php" class="btn btn-primary ">Go somewhere</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <div class="card">
+                <div class="col-lg-3 col-md-6 ">
+                    <div class="card h-100">
                         <img src="img/519346238.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Kempinski Nile Hotel</h5>
@@ -139,8 +169,8 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <div class="card">
+                <div class="col-lg-3 col-md-6 ">
+                    <div class="card h-100 ">
                         <img src="img/483731246.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Hilton Cairo Zamalek Residences </h5>
@@ -152,10 +182,11 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
     </section>
 
-    <section class="items p-80">
+    <section class="items ">
         <div class="container">
             <div class="headline d-flex text-centre ">
                 <h1>Restaurants</h1>
@@ -207,124 +238,6 @@
                             <p class="card-text">Some quick example text to build on the card title and make up the
                                 bulk of the card's content.</p>
                             <a href="restaurant4.php" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="items p-80">
-        <div class="container">
-            <div class="headline d-flex text-centre ">
-                <h1>Our plans</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, maxime.</p>
-                <a href="{{ route('ourplans') }}" class="btn btn-primary">See More</a>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="card">
-                        <img src="img/momo-grill-by-ramnas-manikas-7-683x1024.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk of the card's content.</p>
-
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="card">
-                        <img src="img/momo-grill-by-ramnas-manikas-7-683x1024.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="card">
-                        <img src="img/momo-grill-by-ramnas-manikas-7-683x1024.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="card">
-                        <img src="img/momo-grill-by-ramnas-manikas-7-683x1024.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="items p-80">
-        <div class="container">
-            <div class="headline d-flex text-centre ">
-                <h1>Activities</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, maxime.</p>
-                <a href="{{ route('restaurants') }}" class="btn btn-primary">See More</a>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="card">
-                        <img src="img/momo-grill-by-ramnas-manikas-7-683x1024.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk of the card's content.</p>
-
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="card">
-                        <img src="img/momo-grill-by-ramnas-manikas-7-683x1024.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="card">
-                        <img src="img/momo-grill-by-ramnas-manikas-7-683x1024.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="card">
-                        <img src="img/momo-grill-by-ramnas-manikas-7-683x1024.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
