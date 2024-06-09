@@ -1,4 +1,4 @@
-<!doctype html>
+
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -77,7 +77,7 @@
             @yield('content')
         </main>
     </div>
-    
+
     <script src="{{ Url::asset('js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ Url::asset('js/main.js') }}"></script>
 </body>
