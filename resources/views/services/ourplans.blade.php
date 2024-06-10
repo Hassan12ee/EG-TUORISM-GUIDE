@@ -12,23 +12,48 @@
 
 
 
-@foreach ($view as $view )
+@foreach ($view as $views )
 
 
 
-             <div class="col-lg-3 col-md-6">
-                <div class="card">
-                   <img src="{{URL::asset($view -> imgpath)}}" class="card-img-top" alt="...">
-                   <div class="card-body">
-                      <h5 class="card-title">{{$view -> nameh}}</h5>
-                      <p class="card-text">{{$view -> smalldetails}}</p>
-
-                      <a href="#" class="btn btn-primary">see more</a>
-                   </div>
+             <!-----------------------------newplans-------------------------------->
+             <div class="plan col-lg-3 col-md-6">
+                <div class="inner">
+                    <span class="pricing">
+                        <span>
+                            $49 <small>/ m</small>
+                        </span>
+                    </span>
+                    <p class="title">{{$views -> nameh}}</p>
+                    <p class="info">{{$views -> smalldetails}}</p>
+                    <ul class="features">
+                        <li>
+                            <i class="icon fa-solid fa-circle-check">
+                        </i>
+                            <span><strong>20</strong> team members</span>
+                        </li>
+                        <li>
+                            <i class="icon fa-solid fa-circle-check"> </i>
+                            <span>Plan <strong>team meetings</strong></span>
+                        </li>
+                        <li>
+                            <i class="icon fa-solid fa-circle-check"> </i>
+                            <span>File sharing</span>
+                        </li>
+                    </ul>
+                    <div class="action">
+                    <a class="button" href="{{ url('hotels/Content/'.$views -> id ) }}">
+                        Choose plan
+                    </a>
+                    </div>
                 </div>
-             </div>
-             @endforeach
-       </div>
+            </div>
+            @endforeach
+            <div class="mt-5 d-flex justify-content-center">
+                {{ $view -> links() }}
+
+            </div>
+            </div>
 
 
 

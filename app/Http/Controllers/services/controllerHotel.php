@@ -16,6 +16,14 @@ class controllerHotel extends Controller
 
       return view('services.hotels',compact(var_name:'view'));
     }
+    public function getdetail()
+    {
+      $view=  hotel::select('nameh','imgpath','smalldetails','id') ->paginate(PAGINATION_COUNT);
+
+
+
+      return view('services.ourplans',compact(var_name:'view'));
+    }
     public function gethotel($hotel_id)
     {
         $exit= hotel::find($hotel_id);

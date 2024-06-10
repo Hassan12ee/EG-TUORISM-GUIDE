@@ -17,11 +17,13 @@
 
 
              <div class="col-lg-3 col-md-6">
-                <div class="card">
-                   <img src="{{URL::asset($views -> imgpath)}}" class="card-img-top" alt="...">
+                <div class="card h-75">
+
+                   <img src="{{URL::asset($views -> imgpath)}}" class="card-img-top h-75" alt="...">
+
                    <div class="card-body">
                       <h5 class="card-title">{{$views -> nameh}}</h5>
-                      <p class="card-text">{{$views -> smalldetails}}</p>
+
 
                       <a href="{{ url('hotels/Content/'.$views -> id ) }}" class="btn btn-primary">see more</a>
                    </div>

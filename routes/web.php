@@ -20,7 +20,7 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('in
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 Route::get('/hotels', [App\Http\Controllers\services\controllerHotel::class, 'getdetails'])->name('hotels');
 Route::get('/hotels/Content/{Hotel_id}', [App\Http\Controllers\services\controllerHotel::class, 'gethotel']);
-Route::get('/ourplans', [App\Http\Controllers\services\controllerHotel::class, 'getdetails'])->name('ourplans')-> middleware('verified');
+Route::get('/ourplans', [App\Http\Controllers\services\controllerHotel::class, 'getdetail'])->name('ourplans')-> middleware('verified');
 Route::get('/restaurants', [App\Http\Controllers\services\restaurantscontroller::class, 'getdetails'])->name('restaurants');
 Route::get('/restaurants/Content/{restaurants_id}', [App\Http\Controllers\services\restaurantscontroller::class, 'getrestaurants']);
 Route::get('/Tourplaces', [App\Http\Controllers\services\tourist_placesController::class, 'getdetails'])->name('Tourplaces');

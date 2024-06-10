@@ -16,8 +16,8 @@
     <!-- Scripts -->
 
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/all.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}">
-
 </head>
 <body>
 
@@ -150,7 +150,7 @@
     <!--------------------------------------------------------------------------------->
 
     <script src="{{ Url::asset('js/bootstrap.bundle.min.js') }}"></script>
-
+    <script src="{{ Url::asset('js/all.min.js') }}"></script>
     <script src="{{ Url::asset('js/main.js') }}"></script>
 
 
