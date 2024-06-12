@@ -2,16 +2,29 @@
 
 
 @section('content')
-<div class="container">
+<div class="container mt-3">
     <div class="row">
         <div class="col-12 h-50 mb-5">
             <div class="row">
-
-                <img class="w-100 h-25
+                <div class="col-6 h5">
+                <img class="w-100 h-100
                 " src="{{URL::asset($hotel_info -> imgpath)}}" alt="">
-                <h1>{{ $hotel_info -> NameH}}</h1>
+            </div>
 
-                <div class="col-12 h5"><span class="fa-solid fa-clock ps-5 me-3"></span>7/24</div>
+
+                <div class="col-6 h5 ">
+
+
+                    <h1 class="text-center">{{ $hotel_info -> Hotels}}</h1>
+                    <ul class="navbar-nav p-5 gap-3">
+                        <li>  <span class="fa-solid fa-clock me-3"></span>{{ $hotel_info -> Opening_Hours}}</li>
+                  <li > <label  class="fa-solid fa-clock me-3">Type:</label> {{ $hotel_info -> Type}}</li>
+                  <li>  <label class="fa-solid fa-clock me-3">Region:</label>{{ $hotel_info -> Region}}</li>
+                    <li>  <label class="fa-solid fa-clock me-3">Rating:</label>{{ $hotel_info -> Rating}}</li>
+                        <li>  <label class="fa-solid fa-clock me-3">Budget:</label>{{ $hotel_info -> Budget}}</li>
+                            <li>  <label class="fa-solid fa-clock me-3">Facilities:</label>{{ $hotel_info -> Facilities}}</li>
+                </ul>
+                </div>
             </div>
         </div>
 

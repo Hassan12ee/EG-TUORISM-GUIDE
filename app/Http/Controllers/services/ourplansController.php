@@ -8,17 +8,10 @@ use Illuminate\View\View;
 
 class controllerHotel extends Controller
 {
-    public function getdetails()
-    {
-      $view=  hotel::select('nameh','imgpath','smalldetails','id') ->paginate(PAGINATION_COUNT);
-
-
-
-      return view('services.hotels',compact(var_name:'view'));
-    }
+ 
     public function getdetail()
     {
-      $view=  hotel::select('nameh','imgpath','smalldetails','id') ->paginate(PAGINATION_COUNT);
+      $view=  hotel::select('ID','Hotels','imgpath','smalldetails',) ->paginate(PAGINATION_COUNT);
 
 
 

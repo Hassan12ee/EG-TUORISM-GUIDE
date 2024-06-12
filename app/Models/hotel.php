@@ -10,15 +10,17 @@ class hotel extends Model
     use HasFactory;
 
     protected $fillable = [
-
-        'NameH',
-        'services',
+        'ID',
+        'Hotels',
+        'Type',
+        'Region',
+        'Rating',
+        'Popularity',
+        'Opening_Hours',
+        'Budget',
+        'Facilities',
         'imgpath',
-        'smalldetails',
-        'Stars',
-        'Place-H',
-        'GPS-H',
-        'id',
+
 
     ];
 }

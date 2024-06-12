@@ -22,10 +22,10 @@
                    <img src="{{URL::asset($views -> imgpath)}}" class="card-img-top h-75" alt="...">
 
                    <div class="card-body">
-                      <h5 class="card-title">{{$views -> nameh}}</h5>
+                      <h5 class="card-title">{{$views -> Hotels}}</h5>
 
 
-                      <a href="{{ url('hotels/Content/'.$views -> id ) }}" class="btn btn-primary">see more</a>
+                      <a href="{{ url('hotels/Content/'.$views -> ID ) }}" class="btn btn-primary">see more</a>
                    </div>
 
                 </div>
