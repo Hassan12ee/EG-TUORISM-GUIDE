@@ -32,8 +32,8 @@
 
         <div class="col-12">
 
-                <div class="row">
-                  <div class="col-lg-6">
+                <div class="row w-100">
+                  <div class="col-lg-12">
                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                       <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Details</button>
@@ -49,9 +49,9 @@
                       <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
                         <div class="textimg">
                           <!--هنا مكان ال form-->
-                          {{$hotel_info -> smalldetails }}
+
                           <h1></h1>
-                          <p></p>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo eligendi fuga saepe, asperiores soluta magni error deleniti quas, at assumenda veritatis officia reprehenderit? Vitae excepturi ipsam officia incidunt optio ad ut dignissimos, eligendi quam, facilis neque blanditiis qui magni. Porro cum tempore tenetur explicabo facere nobis deleniti saepe ullam labore, rerum eaque sit optio accusantium nihil inventore incidunt, architecto ad error dolores officiis magnam culpa mollitia reiciendis vitae? Nisi quae asperiores ipsa quaerat neque aliquam magnam culpa sunt ratione eaque itaque nihil, expedita maxime totam harum ducimus cupiditate iste aperiam ipsam aut molestias. Tempore asperiores, qui ex eveniet sunt repellendus.</p>
                         </div>
                       </div>
                       <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">

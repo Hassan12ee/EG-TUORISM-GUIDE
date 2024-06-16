@@ -6,12 +6,12 @@ use App\Models\hotel;
 use Illuminate\View\View;
 
 
-class controllerHotel extends Controller
+class ourplansController extends Controller
 {
- 
+
     public function getdetail()
     {
-      $view=  hotel::select('ID','Hotels','imgpath','smalldetails',) ->paginate(PAGINATION_COUNT);
+      $view=  hotel::select('ID','Hotels','imgpath',) ->paginate(PAGINATION_COUNT);
 
 
 

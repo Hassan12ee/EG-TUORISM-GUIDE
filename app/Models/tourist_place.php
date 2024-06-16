@@ -10,14 +10,19 @@ class tourist_place extends Model
     use HasFactory;
 
     protected $fillable =
+
     [
-        'IDT',
-        'T-name',
-        'small_details',
+        'ID',
+        'Place',
+        'Type',
         'imgpath',
-        'T-Ticket',
-        'details',
-        'web-booking'
+        'Region',
+        'Rating',
+        'Popularity',
+        'Opening_Hours',
+        'Budget',
+        'Activity_Level',
+        'Indoor_Outdoor',
     ];
     public $timestamps = false;
 }

@@ -17,21 +17,22 @@
 
 
              <div class="col-lg-3 col-md-6">
-                <div class="card h-75">
+                <div class="card H-100">
 
-                   <img src="{{URL::asset($views -> imgpath)}}" class="card-img-top h-75" alt="...">
+                   <img src="{{URL::asset('img/469090348z.jpg'  /*$views -> imgpath*/)}}" class="rounded card-img-top" alt="...">
 
-                   <div class="card-body">
+                   <div class="card-body d-flex flex-column justify-content-between">
                       <h5 class="card-title">{{$views -> Hotels}}</h5>
 
 
                       <a href="{{ url('hotels/Content/'.$views -> ID ) }}" class="btn btn-primary">see more</a>
                    </div>
 
+
                 </div>
              </div>
              @endforeach
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center mt-5">
                 {{ $view -> links() }}
 
             </div>

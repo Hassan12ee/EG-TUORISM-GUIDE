@@ -10,7 +10,17 @@ class restaurantscontroller extends Controller
 {
     public function getdetails()
     {
-      $view=  restaurant::select('id','name','imgpath','small_details',) ->paginate(PAGINATION_COUNT);
+      $view=  restaurant::select('ID',
+            'Place',
+            'Food',
+            'imgpath',
+            'Region',
+            'Rating',
+            'Popularity',
+            'Average_Cost',
+            'Opening_Hours',
+            'Price_Range',
+            'Ambiance',) ->paginate(PAGINATION_COUNT);
 
 
 
@@ -23,14 +33,18 @@ class restaurantscontroller extends Controller
         return redirect() ->back();
 
         $restaurants_info = restaurant::select(
-            'id',
-            'name',
-            'small_details',
+
+            'ID',
+            'Place',
+            'Food',
             'imgpath',
-            'type-food',
-            'stars',
-            'place',
-            'gps-r',) ->find($restaurants_id);
+            'Region',
+            'Rating',
+            'Popularity',
+            'Average_Cost',
+            'Opening_Hours',
+            'Price_Range',
+            'Ambiance',) ->find($restaurants_id);
         return view('services.restaurants_info',compact(var_name:'restaurants_info')) ;
     }
 }

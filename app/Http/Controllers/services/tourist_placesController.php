@@ -10,7 +10,7 @@ class tourist_placesController extends Controller
 {
     public function getdetails()
     {
-      $view=  tourist_place::select('T-name','imgpath','small_details') ->paginate(PAGINATION_COUNT);
+      $view=  tourist_place::select('ID','Place',) ->paginate(PAGINATION_COUNT);
 
 
 
@@ -23,13 +23,17 @@ class tourist_placesController extends Controller
         return redirect() ->back();
 
         $tourist_places_info = hotel::select(
-        'ID',
-        'T-name',
-        'small_details',
-        'imgpath',
-        'T-Ticket',
-        'details',
-        'web-booking',) ->find($tourist_places_id);
+            'ID',
+            'Place',
+            'Type',
+            'imgpath',
+            'Region',
+            'Rating',
+            'Popularity',
+            'Opening_Hours',
+            'Budget',
+            'Activity_Level',
+            'Indoor_Outdoor',) ->find($tourist_places_id);
         return view('services.Tourplaces_info',compact(var_name:'tourist_places_info')) ;
 
     }

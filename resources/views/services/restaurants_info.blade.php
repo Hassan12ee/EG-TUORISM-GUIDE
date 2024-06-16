@@ -11,7 +11,7 @@
       <div class="row">
         <div class="col-lg-6">
 
-          <img class="jjj" src="{{URL::asset('img/restaurants/' .$restaurants_info -> imgpath)}}" alt="">
+          <img class="jjj" src="{{URL::asset(''.$restaurants_info -> imgpath)}}" alt="">
         </div>
       </div>
     </div>
