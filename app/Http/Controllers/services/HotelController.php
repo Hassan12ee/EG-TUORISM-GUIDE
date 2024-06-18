@@ -10,7 +10,17 @@ class HotelController extends Controller
 {
     public function getdetails()
     {
-      $view=  hotel::select('ID','Hotels','imgpath',) ->paginate(PAGINATION_COUNT);
+      $view=  hotel::select(
+      'ID',
+      'Hotels',
+      'Type',
+      'Region',
+      'Rating',
+      'Popularity',
+      'Opening_Hours',
+      'Budget',
+      'Facilities',
+      'imgpath',) ->paginate(PAGINATION_COUNT);
 
 
 

@@ -12,26 +12,43 @@
 
 
 
-@foreach ($view as $views )
+             @foreach ($view as $views)
+<div class="offset-md-1 col-md-10  ">
+<div class="card mb-3 ">
+    <div class="row g-0">
+      <div class="col-md-5">
+        <img src="{{ URL::asset(''. $views-> imgpath) }}" class="rounded w-100 h-100  " alt="...">
+      </div>
+      <div class="col-md-2 p-4 d-flex flex-column justify-content-center align-content-center border border-end-1 rounded-end-5" >
+        <a href="{{ url('hotels/Content/'.$views -> ID ) }}" class="btn btn-primary mb-3">see more</a>
+        <a href="{{ url('hotels/plan/' . $views->ID) }}" class="btn btn-primary">Add to plan</a>
+
+    </div>
+      <div class="col-md-5">
+        <div class="card-body"> <div class="d-flex justify-content-between">
+            <span class="badge text-bg-secondary">{{ $views-> Region }}</span>       <i class="fa-regular fa-heart "></i></div>
+          <h5 class="card-title text-center ubuntu-bold">{{ $views-> Hotels }}</h5>
+          <span class="fa-solid fa-clock me-3"></span>{{ $views -> Opening_Hours}}
+          <h6 class="card-text ">{{ $views-> Type }} Hotel</h6>
+          <h6 class="card-text ">Facilities : {{ $views-> Facilities }} </h6>
+          <h6 class="card-text ">Average Cost : {{ $views-> Budget }} </h6>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i><!-- regular-- -->
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half"></i>
+            {{ $views-> Rating }}/5
+          </div>
 
 
 
-             <div class="col-lg-3 col-md-6">
-                <div class="card H-100">
-
-                   <img src="{{URL::asset('img/469090348z.jpg'  /*$views -> imgpath*/)}}" class="rounded card-img-top" alt="...">
-
-                   <div class="card-body d-flex flex-column justify-content-between">
-                      <h5 class="card-title">{{$views -> Hotels}}</h5>
-
-
-                      <a href="{{ url('hotels/Content/'.$views -> ID ) }}" class="btn btn-primary">see more</a>
-                   </div>
-
-
-                </div>
-             </div>
-             @endforeach
+        </div>
+      </div>
+    </div>
+</div>
+  </div>
+ @endforeach
 <div class="d-flex justify-content-center mt-5">
                 {{ $view -> links() }}
 

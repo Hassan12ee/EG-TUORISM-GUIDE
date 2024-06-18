@@ -20,11 +20,11 @@
     <link rel="stylesheet" href="{{ URL::asset('css/all.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}">
 </head>
-<body class="ubuntu-medium">
+<body class="ubuntu-regular w-100">
 
     <header>
         <div id="app">
-            <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm bg-nav">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm bg-nav">
                 <div class="container">
                     <a class="navbar-brand" href="{{ route('index') }}">
                         <img src="{{ URL::asset('img/Project Logo-1.png') }}" alt="logo">
@@ -60,12 +60,12 @@
                                     Info
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="{{ route('hotels') }}">About us</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('about') }}">About us</a></li>
                                     <li><a class="dropdown-item" href="{{ route('hotels') }}">Contact us</a></li>
 
                                 </ul>
                         </ul>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
                             <!-- Left Side Of Navbar -->
                             <ul class="navbar-nav me-auto">
 
