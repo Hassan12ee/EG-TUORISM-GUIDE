@@ -15,12 +15,12 @@ use Illuminate\Support\Facades\Auth;
 */
 
 define('PAGINATION_COUNT', 16);
-Auth::routes(['verify'=> true]);
+Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 Route::get('/hotels', [App\Http\Controllers\services\HotelController::class, 'getdetails'])->name('hotels');
 Route::get('/hotels/Content/{Hotel_id}', [App\Http\Controllers\services\HotelController::class, 'gethotel']);
-Route::get('/ourplans', [App\Http\Controllers\services\ourplansController::class, 'getdetail'])->name('ourplans')-> middleware('verified');
+Route::get('/ourplans', [App\Http\Controllers\services\ourplansController::class, 'getdetail'])->name('ourplans');
 Route::get('/restaurants', [App\Http\Controllers\services\restaurantscontroller::class, 'getdetails'])->name('restaurants');
 Route::get('/restaurants/Content/{restaurants_id}', [App\Http\Controllers\services\restaurantscontroller::class, 'getrestaurants']);
 Route::get('/restaurants/plan/{restaurants_id}', [App\Http\Controllers\services\restaurantscontroller::class, 'getrestaurants']);

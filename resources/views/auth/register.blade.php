@@ -10,7 +10,7 @@
         <div class="col-md-12">
             <div class="form-floating">
                 <input type="text" name="user" class="form-control @error('user') is-invalid @enderror" id="user" value="{{ old('user') }}" required autocomplete="user">
-                <label for="user">{{ __('User') }}</label>
+                <label for="user">User</label>
               @error('user')
                    <span class="invalid-feedback" role="alert">
                      <strong>{{ $message }}</strong>
@@ -72,7 +72,7 @@
             </div>
          <div class="col-md-6">
          <div class="form-floating">
-             <input type="text" name="birthday" class="form-control @error('birthday') is-invalid @enderror" id="birthday"  required autocomplete="">
+             <input type="date" name="birthday" class="form-control @error('birthday') is-invalid @enderror" id="birthday"  required autocomplete="birthday">
              <label for="birthday">Birthday</label>
               @error('birthday')
                                 <span class="invalid-feedback" role="alert">
@@ -81,7 +81,17 @@
                             @enderror
          </div>
         </div>
-
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="tel" name="phone" class="form-control @error('phone') is-invalid @enderror" id="phone"  required autocomplete="phone">
+                <label for="phone">phone</label>
+                 @error('phone')
+                                   <span class="invalid-feedback" role="alert">
+                                       <strong>{{ $message }}</strong>
+                                   </span>
+                               @enderror
+            </div>
+           </div>
 
 
         <div class="col-12" >
@@ -94,8 +104,8 @@
 
 
        </form>
-       <div class="col-md-4 ">
-        <a href="{{url('redirect/facebook')}}">Login With FaceBook</a>
+
+
     </div>
-   
+</div></div>
 @endsection
