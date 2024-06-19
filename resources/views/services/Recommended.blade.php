@@ -1,158 +1,4 @@
-{{-- @extends('include.navbar')
-
-@section('content')
-    <div class="container">
-        <div class="row g-5">
-            <h1 class="text-center">Ansewr the Questions</h1>
-             <p class="text-center"> this help us to Recommend the plane </p>
-        
-        <form method="post" action="{{ route('register') }}" class="row g-3">
-            @csrf
-            <div class="col-md-6 offset-3">
-                <div class="row g-5">
-
-
-                    <div class="col-md-12">
-                        <label for="select" class="fw-bold pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, culpa voluptatem eaque voluptate vero eos.</label>
-                        <select class="form-select   form-select-md @error('select') is-invalid @enderror"
-                            aria-label="Small select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                        @error('select')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-
-                    </div>
-                    <div class="col-md-12">
-                        <label for="select" class="fw-bold  pb-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, culpa voluptatem eaque voluptate vero eos.</label>
-                        <select class="form-select form-select-md @error('select') is-invalid @enderror"
-                            aria-label="Small select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                        @error('select')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-
-                    </div>
-                    <div class="col-md-12">
-                        <label for="select" class="fw-bold  pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, culpa voluptatem eaque voluptate vero eos.</label>
-                        <select class="form-select form-select-md @error('select') is-invalid @enderror"
-                            aria-label="Small select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                        @error('select')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-
-                    </div>
-                    <div class="col-md-12">
-                        <label for="select" class="fw-bold  pb-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, culpa voluptatem eaque voluptate vero eos.</label>
-                        <select class="form-select form-select-md @error('select') is-invalid @enderror"
-                            aria-label="Small select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                        @error('select')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-
-                    </div>
-                    <div class="col-md-12">
-                        <label for="select" class="fw-bold  pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, culpa voluptatem eaque voluptate vero eos.</label>
-                        <select class="form-select form-select-md @error('select') is-invalid @enderror"
-                            aria-label="Small select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                        @error('select')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-
-                    </div>
-                    <div class="col-md-12">
-                        <label for="select" class="fw-bold  pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, culpa voluptatem eaque voluptate vero eos.</label>
-                        <select class="form-select form-select-md @error('select') is-invalid @enderror"
-                            aria-label="Small select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                        @error('select')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-
-                    </div>
-                    <div class="col-md-12">
-                        <label for="select" class="fw-bold  pb-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, culpa voluptatem eaque voluptate vero eos.</label>
-                        <select class="form-select form-select-md @error('select') is-invalid @enderror"
-                            aria-label="Small select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                        @error('select')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-
-                    </div>
-                    <div class="col-md-12">
-                        <label for="select" class="fw-bold pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, culpa voluptatem eaque voluptate vero eos.</label>
-                        <select class="form-select form-select-md @error('select') is-invalid @enderror"
-                            aria-label="Small select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                        @error('select')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-
-                    </div>
-
-                
-
-
-
-                    <button type="submit" class="btn btn-primary ">
-                        {{ __('Submit') }}
-                    </button>
-                </div>
-            </div>
-        </form>
-    @endsection --}}
-    @extends('include.navbar')
+@extends('include.navbar')
 
     @section('content')
         <div class="container mt-5">
@@ -162,8 +8,8 @@
                     <p class="text-center">This helps us to recommend the best plan</p>
                 </div>
             </div>
-    
-            <form method="post" action="{{ route('register') }}" class="row g-3" id="questionForm">
+
+            <form method="post" action="" class="row g-3" id="questionForm">
                 @csrf
                 <div class="col-md-6 offset-md-3">
                     <!-- Question 1 -->
@@ -187,7 +33,7 @@
                             </span>
                         @enderror
                     </div>
-    
+
                     <!-- Question 2 -->
                     <div class="form-group mb-4">
                         <label for="placeType" class="fw-bold pb-2">What type of place do you prefer?</label>
@@ -203,7 +49,7 @@
                             </span>
                         @enderror
                     </div>
-    
+
                     <!-- Question 3 -->
                     <div class="form-group mb-4">
                         <label for="foodType" class="fw-bold pb-2">What type of food do you prefer?</label>
@@ -220,12 +66,12 @@
                             </span>
                         @enderror
                     </div>
-    
+
                     <button type="submit" class="btn btn-primary btn-block" onclick="submitForm(event)">Submit</button>
                 </div>
             </form>
         </div>
-    
+
         <!-- Bootstrap Modal for displaying recommendations -->
         <div class="modal fade" id="recommendationsModal" tabindex="-1" role="dialog" aria-labelledby="recommendationsModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
@@ -248,7 +94,7 @@
                 </div>
             </div>
         </div>
-    
+
         <script>
             function submitForm(event) {
                 event.preventDefault();
@@ -256,7 +102,7 @@
                 const data = new FormData(form);
                 const value = Object.fromEntries(data.entries());
                 delete value._token;
-    
+
                 fetch('http://localhost:8080/get_recommendations', {
                     method: 'POST',
                     headers: {
@@ -273,13 +119,13 @@
                     console.error('Error:', error);
                 });
             }
-    
+
             function displayRecommendations(data) {
                 // Clear previous data
                 document.getElementById('placesList').innerHTML = '';
                 document.getElementById('restaurantsList').innerHTML = '';
                 document.getElementById('hotelsList').innerHTML = '';
-    
+
                 // Populate places
                 if (data.places.length === 0) {
                     document.getElementById('placesList').innerHTML = '<p>No places recommended</p>';
@@ -306,7 +152,7 @@
                         document.getElementById('placesList').insertAdjacentHTML('beforeend', card);
                     });
                 }
-    
+
                 // Populate restaurants
                 if (data.restaurants.length === 0) {
                     document.getElementById('restaurantsList').innerHTML = '<p>No restaurants recommended</p>';
@@ -333,7 +179,7 @@
                         document.getElementById('restaurantsList').insertAdjacentHTML('beforeend', card);
                     });
                 }
-    
+
                 // Populate hotels
                 if (data.hotels.length === 0) {
                     document.getElementById('hotelsList').innerHTML = '<p>No hotels recommended</p>';
@@ -359,11 +205,9 @@
                         document.getElementById('hotelsList').insertAdjacentHTML('beforeend', card);
                     });
                 }
-    
+
                 // Show the modal
                 $('#recommendationsModal').modal('show');
             }
         </script>
     @endsection
-    
-    

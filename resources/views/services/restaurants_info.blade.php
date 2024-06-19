@@ -17,7 +17,14 @@
     </div>
 
   </section>
-
+  <div class="rating">
+    <i class="fa-solid fa-star"></i><!-- regular-- -->
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star-half"></i>
+    {{ $views-> Rating }}/5
+  </div>
   <section>
 
 

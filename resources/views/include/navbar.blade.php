@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{{ URL::asset('css/all.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}">
 </head>
-<body class="ubuntu-regular w-100">
+<body class="poppins-medium w-100">
 
     <header>
         <div id="app">

@@ -40,18 +40,14 @@
             </div> @endforeach  -->
 <!-------------------------------------------->
 @foreach ($view as $views)
-<div class="offset-md-2 col-md-8  ">
+<div class=" col-md-6  ">
 <div class="card mb-3 ">
     <div class="row g-0">
       <div class="col-md-5 img-con">
         <img src="{{ URL::asset(''. $views-> imgpath) }}" class="rounded w-100 h-100  " alt="...">
       </div>
-      <div class="col-md-2 p-4 d-flex flex-column justify-content-center align-content-center border border-end-1 rounded-5-end-5" >
-        <a href="{{ url('hotels/Content/'.$views -> ID ) }}" class="btn btn-primary mb-3">see more</a>
-        <a href="{{ url('hotels/plan/' . $views->ID) }}" class="btn btn-primary">Add to plan</a>
 
-    </div>
-      <div class="col-md-5">
+      <div class="col-md-7">
         <div class="card-body"> <div class="d-flex justify-content-between">
             <span class="badge text-bg-secondary">{{ $views-> Region }}</span>       <i class="fa-regular fa-heart "></i></div>
           <h5 class="card-title text-center ubuntu-bold">{{ $views-> Place }}</h5>
@@ -67,8 +63,10 @@
             <i class="fa-solid fa-star-half"></i>
             {{ $views-> Rating }}/5
           </div>
-
-
+          <div class="mt-3">
+          <a href="{{ url('hotels/Content/'.$views -> ID ) }}" class="btn btn-primary">see more</a>
+          <a href="{{ url('hotels/plan/' . $views->ID) }}" class="btn btn-primary">Add to plan</a>
+        </div>
         </div>
       </div>
     </div>

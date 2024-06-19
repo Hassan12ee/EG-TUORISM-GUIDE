@@ -7,57 +7,118 @@
     font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: url(../fonts/Ubuntu.zip) format('ZIP');
+    src: url(../fonts/Poppins.zip) format('ZIP');
+  }
+.items{
+    background-color: #F9F6F4;
+}
+  .poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
   }
 
-  .ubuntu-light {
-    font-family: "Ubuntu", sans-serif;
+  .poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  .poppins-light {
+    font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: normal;
   }
 
-  .ubuntu-regular {
-    font-family: "Ubuntu", sans-serif;
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
 
-  .ubuntu-medium {
-    font-family: "Ubuntu", sans-serif;
+  .poppins-medium {
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
   }
 
-  .ubuntu-bold {
-    font-family: "Ubuntu", sans-serif;
+  .poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .poppins-bold {
+    font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: normal;
   }
 
-  .ubuntu-light-italic {
-    font-family: "Ubuntu", sans-serif;
+  .poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  .poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  .poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+
+  .poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+
+  .poppins-light-italic {
+    font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: italic;
   }
 
-  .ubuntu-regular-italic {
-    font-family: "Ubuntu", sans-serif;
+  .poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: italic;
   }
 
-  .ubuntu-medium-italic {
-    font-family: "Ubuntu", sans-serif;
+  .poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: italic;
   }
 
-  .ubuntu-bold-italic {
-    font-family: "Ubuntu", sans-serif;
+  .poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  .poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: italic;
   }
 
+  .poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+
+  .poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
 .bg-nav{
 
     left: 0;
@@ -125,8 +186,56 @@ font-size: 62px;
 }
 .img-con
 {
-    max-height: 300px;
+
+   object-fit: cover;
 }
+@media (min-width: 576px) {  .img-con
+    {
+       max-height: 407.7px;
+       object-fit: cover;
+    } }
+@media (min-width: 1200px) {
+    .img-con
+    {
+       max-height: 267.6px;
+       object-fit: cover;
+    }
+ }
+
+.card-con {
+    max-height: 250px;
+    --bs-card-spacer-y: 1rem;
+    --bs-card-spacer-x: 1rem;
+    --bs-card-title-spacer-y: 0.5rem;
+    --bs-card-title-color: ;
+    --bs-card-subtitle-color: ;
+    --bs-card-border-width: var(--bs-border-width);
+    --bs-card-border-color: var(--bs-border-color-translucent);
+    /* --bs-card-border-radius: var(--bs-border-radius); */
+    --bs-card-box-shadow: ;
+    --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+    --bs-card-cap-padding-y: 0.5rem;
+    --bs-card-cap-padding-x: 1rem;
+    --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+    --bs-card-cap-color: ;
+    --bs-card-height: ;
+    --bs-card-color: ;
+    --bs-card-bg: var(--bs-body-bg);
+    --bs-card-img-overlay-padding: 1rem;
+    --bs-card-group-margin: 0.75rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: var(--bs-card-height);
+    color: var(--bs-body-color);
+    word-wrap: break-word;
+    background-color: var(--bs-card-bg);
+    background-clip: border-box;
+    border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+
+}
+
 .text-bg-c {
 color: #fff !important;
 background-color: #3C81C3;
