@@ -12,8 +12,6 @@
 
     <!-- Scripts -->
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 
 
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
@@ -149,12 +147,13 @@
         </div>
     </footer>
     <!--------------------------------------------------------------------------------->
-
+    <script src="{{ Url::asset('js/main.js') }}"></script>
     <script src="{{ Url::asset('js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ Url::asset('js/all.min.js') }}"></script>
-    <script src="{{ Url::asset('js/main.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 
 
 </body>
 
-</html>
+</html> 

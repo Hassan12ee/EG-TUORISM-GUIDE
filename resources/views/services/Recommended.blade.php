@@ -96,6 +96,19 @@
         </div>
 
         <script>
+            // $(document).on('click','#save_offer',function name(e) {
+            //     e.preventDefault();
+            //     $.ajax({
+            //         Type: 'POST',
+            //         url: "{{ route() }}"
+
+            //     });
+
+            // });
+
+
+
+
             function submitForm(event) {
                 event.preventDefault();
                 const form = document.getElementById('questionForm');
@@ -107,6 +120,9 @@
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*',
+                        'Access-Control-Allow-Methods':'GET, POST, PUT, DELETE, OPTIONS',
+                        'Access-Control-Allow-Headers': 'X-Requested-With, Content-Type, X-Token-Auth, Authorization',
                     },
                     body: JSON.stringify(value)
                 })

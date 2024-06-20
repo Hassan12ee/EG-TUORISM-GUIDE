@@ -1,5 +1,6 @@
 @extends('include.navbar')
 @section('content')
+
 <section >
     <div class="container">
        <div class="headline d-flex text-centre ">
@@ -9,7 +10,6 @@
 
 
        <div class="row">
-
         @foreach ($view as $views)
         <div class=" col-md-6  ">
         <div class="card mb-3 ">
@@ -26,14 +26,13 @@
                   <h6 class="card-text ">{{ $views-> Type }} Hotel</h6>
                   <h6 class="card-text ">Facilities : {{ $views-> Facilities }} </h6>
                   <h6 class="card-text ">Average Cost : {{ $views-> Budget }} </h6>
-                  <div class="rating">
-                    <i class="fa-solid fa-star"></i><!-- regular-- -->
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half"></i>
+
+                  <div class="rating" id="hotelsr" >
+
                     {{ $views-> Rating }}/5
                   </div>
+
+
                   <div class="mt-3">
                   <a href="{{ url('hotels/Content/'.$views -> ID ) }}" class="btn btn-primary">see more</a>
                   <a href="{{ url('hotels/plan/' . $views->ID) }}" class="btn btn-primary">Add to plan</a>
