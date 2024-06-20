@@ -17,4 +17,4 @@ use app\http\Controllers\api;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/Recommended', [App\Http\Controllers\api\RecommendedController::class, 'index']);
+// Route::get('/Recommended', [App\Http\Controllers\api\RecommendedController::class, 'index']);

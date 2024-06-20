@@ -40,7 +40,8 @@
                         <select id="placeType" name="placeType" class="form-select form-select-md @error('placeType') is-invalid @enderror" aria-label="Place type select">
                             <option selected disabled>Open this select menu</option>
                             <option value="Entertainment">Entertainment</option>
-                            <option value="Tourism">Tourism</option>
+                            <option value="Touri
+                            sm">Tourism</option>
                             <option value="Natural">Natural</option>
                         </select>
                         @error('placeType')
@@ -108,12 +109,11 @@
                 delete value._token;
 
                 fetch('http://localhost:8080/get_recommendations', {
+                                
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*',
-                        'Access-Control-Allow-Methods':'GET, POST, PUT, DELETE, OPTIONS',
-                        'Access-Control-Allow-Headers': 'X-Requested-With, Content-Type, X-Token-Auth, Authorization',
+                       
                     },
                     body: JSON.stringify(value)
                 })

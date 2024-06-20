@@ -34,7 +34,7 @@ Route::post('/restaurants/Content/{restaurants_id}', [RestaurantsController::cla
 Route::post('/restaurants/plan/{restaurants_id}', [RestaurantsController::class, 'getrestaurants']);
 Route::get('/Tourplaces', [tourist_placesController::class, 'getdetails'])->name('Tourplaces');
 Route::post('/Tourplaces/Content/{Tourplaces_id}',[tourist_placesController::class, 'gettourist_places']);
-Route::get('/get', [RecommendedController::class, 'getRecommended'])->name('Recommended');
+Route::post('/Recommended', [RecommendedController::class, 'getRecommended'])->name('Recommended');
 
 ########################### admin side ####################################
 Route::middleware(['auth'])->group(function () {
