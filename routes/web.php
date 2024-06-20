@@ -1,11 +1,17 @@
 <?php
-
-
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\Services\restaurantscontroller;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Services\HotelController;
+use App\Http\Controllers\Services\ourplansController;
+use App\Http\Controllers\Services\tourist_placesController;
+use App\Http\Controllers\Services\RecommendedController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Web RoutesHotelController
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -14,20 +20,40 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-define('PAGINATION_COUNT', 8);
+define('PAGINATION_COUNT', 10);
 Auth::routes();
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
-Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
-Route::get('/hotels', [App\Http\Controllers\services\HotelController::class, 'getdetails'])->name('hotels');
-Route::get('/hotels/Content/{Hotel_id}', [App\Http\Controllers\services\HotelController::class, 'gethotel']);
-Route::get('/ourplans', [App\Http\Controllers\services\ourplansController::class, 'getdetail'])->name('ourplans');
-Route::get('/restaurants', [App\Http\Controllers\services\restaurantscontroller::class, 'getdetails'])->name('restaurants');
-Route::get('/restaurants/Content/{restaurants_id}', [App\Http\Controllers\services\restaurantscontroller::class, 'getrestaurants']);
-Route::get('/restaurants/plan/{restaurants_id}', [App\Http\Controllers\services\restaurantscontroller::class, 'getrestaurants']);
-Route::get('/Tourplaces', [App\Http\Controllers\services\tourist_placesController::class, 'getdetails'])->name('Tourplaces');
-Route::get('/Tourplaces/Content/{Tourplaces_id}', [App\Http\Controllers\services\tourist_placesController::class, 'gettourist_places']);
-Route::get('/Recommended', [App\Http\Controllers\services\RecommendedController::class, 'getRecommended'])->name('Recommended');
 
+Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/home', [HomeController::class, 'index'])->name('index');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/hotels', [HotelController::class, 'getdetails'])->name('hotels');
+Route::post('/hotels/Content/{Hotel_id}', [HotelController::class, 'gethotel']);
+Route::get('/ourplans', [ourplansController::class, 'getdetail'])->name('ourplans');
+Route::get('/restaurants', [RestaurantsController::class, 'getdetails'])->name('restaurants');
+Route::post('/restaurants/Content/{restaurants_id}', [RestaurantsController::class, 'getrestaurants']);
+Route::post('/restaurants/plan/{restaurants_id}', [RestaurantsController::class, 'getrestaurants']);
+Route::get('/Tourplaces', [tourist_placesController::class, 'getdetails'])->name('Tourplaces');
+Route::post('/Tourplaces/Content/{Tourplaces_id}',[tourist_placesController::class, 'gettourist_places']);
+Route::get('/get', [RecommendedController::class, 'getRecommended'])->name('Recommended');
 
+########################### admin side ####################################
+Route::middleware(['auth'])->group(function () {
+    Route::get('/admin/home', [HomeController::class, 'adminhome'])->name('adminhome');
+
+    Route::get('/admin/restaurant/view',[RestaurantsController::class,'adminview']);
+    Route::get('/admin/restaurant',[RestaurantsController::class,'viewadmin']);
+    Route::post('/admin/restaurant/create',[RestaurantsController::class,'create'])->name('res.create');
+
+    Route::get('/admin/Tourplaces/view',[tourist_placesController::class,'adminview']);
+Route::get('/admin/Tourplaces',[tourist_placesController::class,'viewadmin']);
+Route::post('/admin/Tourplaces/create',[tourist_placesController::class,'create'])->name('res1.create');
+
+Route::get('/admin/hotels/view',[HotelController::class,'adminview']);
+Route::post('/admin/hotels/update',[HotelController::class,'adminview'])->name('res2.update');
+Route::get('/admin/hotels',[HotelController::class,'viewadmin']);
+Route::post('/admin/hotels/create',[HotelController::class,'create'])->name('res2.create');
+
+// Route::get('/admin/restaurant',[RestaurantsController::class,'viewadmin']);
+// Route::post('/admin/restaurant/create',[RestaurantsController::class,'create'])->name('res3.create');
+});
 

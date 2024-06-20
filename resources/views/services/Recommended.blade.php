@@ -96,15 +96,6 @@
         </div>
 
         <script>
-            // $(document).on('click','#save_offer',function name(e) {
-            //     e.preventDefault();
-            //     $.ajax({
-            //         Type: 'POST',
-            //         url: "{{ route() }}"
-
-            //     });
-
-            // });
 
 
 

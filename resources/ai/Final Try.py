@@ -6,9 +6,12 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 import numpy as np
 
-places_df = pd.read_csv('places_data.csv')
-restaurants_df = pd.read_csv('restaurants_data.csv')
-hotels_df = pd.read_csv('hotels_data.csv')
+places_df = pd.read_csv('tourist_places.csv')
+restaurants_df = pd.read_csv('restaurants.csv')
+hotels_df = pd.read_csv('Hotels.csv')
+
+
+
 
 # Label Encoding for categorical data
 le_place_type = LabelEncoder()
@@ -150,10 +153,10 @@ class RequestHandler(BaseHTTPRequestHandler):
             self._send_response({'error': 'Invalid endpoint'}, status=404)
 
 def run(server_class=HTTPServer, handler_class=RequestHandler, port=8080):
-    server_address = ('', port)
+    server_address = ('http://localhost', port)
     httpd = server_class(server_address, handler_class)
     print(f'Starting httpd server on port {port}')
     httpd.serve_forever()
 
-if _name_ == '_main_':
+if __name__ == '_main_':
     run()
