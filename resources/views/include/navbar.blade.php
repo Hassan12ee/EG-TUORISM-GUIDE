@@ -69,7 +69,17 @@
                                     admin
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="{{ route('adminhome') }}">home</a></li>
+                                    <li><li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            admin
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="{{ route('adminhome') }}">home</a></li>
+                                            <li><a class="dropdown-item" href="{{ route('hotels') }}">Contact us</a></li>
+
+                                        </ul>
+                                    </li></li>
                                     <li><a class="dropdown-item" href="{{ route('hotels') }}">Contact us</a></li>
 
                                 </ul>

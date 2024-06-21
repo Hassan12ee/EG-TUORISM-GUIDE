@@ -1,9 +1,11 @@
 @extends('include.navbar')
 @section('content')
+<section class="mt-5">
+
 
 @if(Session::has('success'))
 
-    <div class="alert alert-success">
+    <div class="alert alert-success mt-5">
            {{Session::get('success')}}
     </div>
     @endif
@@ -37,10 +39,10 @@
 
     @foreach($view as $offer)
         <tr>
-            <td scope="row">{{$offer -> id}}</td>
+            <td scope="row">{{$offer -> ID}}</td>
             <td>{{$offer -> Hotels}}</td>
             <td>{{$offer -> Type}}</td>
-            <td><img  style="width: 90px; height: 90px;" src="{{asset('images/Hotels/'.$offer->imgpath)}}"></td>
+            {{-- <td><img  style="width: 90px; height: 90px;" src="{{asset('img/Hotels/'.$offer->imgpath)}}"></td> --}}
             <td>{{$offer -> Region}}</td>
             <td>{{$offer -> Rating}}</td>
             <td>{{$offer -> Popularity}}</td>
@@ -49,8 +51,8 @@
             <td>{{$offer -> Facilities}}</td>
             <td>{{$offer -> details}}</td>
             <td>
-                {{-- <a href="{{url('offers/edit/'.$offer -> id)}}" class="btn btn-success"> update</a>
-                <a href="{{route('offers.delete',$offer -> id)}}" class="btn btn-danger"> delete</a> --}}
+                <a href="{{url('admin/hotels/update/'. $offer-> ID)}}" class="btn btn-success"> update</a>
+                {{-- <a href="{{route('offers.delete',$offer -> id)}}" class="btn btn-danger"> delete</a> --}}
              </td>
 
         </tr>
@@ -71,4 +73,5 @@
 <div class="d-flex justify-content-center">
     {!!  $view -> links() !!}
     </div>
+</section>
 @endsection

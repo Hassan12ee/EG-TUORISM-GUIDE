@@ -51,7 +51,8 @@ Route::get('/admin/Tourplaces',[tourist_placesController::class,'viewadmin']);
 Route::post('/admin/Tourplaces/create',[tourist_placesController::class,'create'])->name('res1.create');
 
 Route::get('/admin/hotels/view',[HotelController::class,'adminview']);
-Route::post('/admin/hotels/update',[HotelController::class,'adminview'])->name('res2.update');
+Route::get('/admin/hotels/update/{Hotel_id}',[HotelController::class,'edit']);
+Route::get('/admin/hotels/update/done/{Hotel_id}',[HotelController::class,'Update']);
 Route::get('/admin/hotels',[HotelController::class,'viewadmin']);
 Route::post('/admin/hotels/create',[HotelController::class,'create'])->name('res2.create');
 

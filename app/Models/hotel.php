@@ -23,4 +23,5 @@ class hotel extends Model
 
 
     ];
+    public $timestamps = false;
 }

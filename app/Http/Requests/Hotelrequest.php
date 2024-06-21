@@ -25,7 +25,7 @@ class Hotelrequest extends FormRequest
             //
             'Hotels' => 'required|max:100',
             'Type' => 'required',
-            'imgpath'=> 'required|max:100',
+           
             'Region' => 'required|max:255',
             'Rating'=> 'required|max:100',
             'Popularity'=> 'required|max:100',

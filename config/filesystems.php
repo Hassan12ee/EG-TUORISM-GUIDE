@@ -44,7 +44,20 @@ return [
             'throw' => false,
         ],
 
-
+        'Hotels' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/img/Hotels'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+        'Tourplaces' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/img/Tourplaces'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
         'restaurants' => [
             'driver' => 'local',
             'root' => storage_path('app/public/img/restaurants'),
