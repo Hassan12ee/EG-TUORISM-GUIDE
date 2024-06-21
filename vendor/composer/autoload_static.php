@@ -376,8 +376,8 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -585,11 +585,7 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
-        'App\\Http\\Controllers\\services\\HotelController' => __DIR__ . '/../..' . '/app/Http/Controllers/services/HotelController.php',
-        'App\\Http\\Controllers\\services\\RecommendedController' => __DIR__ . '/../..' . '/app/Http/Controllers/services/RecommendedController.php',
-        'App\\Http\\Controllers\\services\\ourplansController' => __DIR__ . '/../..' . '/app/Http/Controllers/services/ourplansController.php',
-        'App\\Http\\Controllers\\services\\restaurantscontroller' => __DIR__ . '/../..' . '/app/Http/Controllers/services/restaurantscontroller.php',
-        'App\\Http\\Controllers\\services\\tourist_placesController' => __DIR__ . '/../..' . '/app/Http/Controllers/services/tourist_placesController.php',
+        'App\\Http\\Controllers\\api\\RecommendedController' => __DIR__ . '/../..' . '/app/Http/Controllers/api/RecommendedController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -600,6 +596,9 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Requests\\Hotelrequest' => __DIR__ . '/../..' . '/app/Http/Requests/Hotelrequest.php',
+        'App\\Http\\Requests\\Ourplansrequest' => __DIR__ . '/../..' . '/app/Http/Requests/Ourplansrequest.php',
+        'App\\Http\\Requests\\Touristrequest' => __DIR__ . '/../..' . '/app/Http/Requests/Touristrequest.php',
         'App\\Http\\Requests\\restaurantrequest' => __DIR__ . '/../..' . '/app/Http/Requests/restaurantrequest.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Models\\hotel' => __DIR__ . '/../..' . '/app/Models/hotel.php',
