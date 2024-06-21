@@ -40,8 +40,7 @@
                         <select id="placeType" name="placeType" class="form-select form-select-md @error('placeType') is-invalid @enderror" aria-label="Place type select">
                             <option selected disabled>Open this select menu</option>
                             <option value="Entertainment">Entertainment</option>
-                            <option value="Touri
-                            sm">Tourism</option>
+                            <option value="Tourism">Tourism</option>
                             <option value="Natural">Natural</option>
                         </select>
                         @error('placeType')
@@ -121,12 +120,52 @@
                 .then(data => {
                     console.log('Success:', data);
                     displayRecommendations(data);
+                    saveRecommendations(data);
                 })
                 .catch((error) => {
                     console.error('Error:', error);
                 });
             }
 
+
+            function saveRecommendations(data) {
+            const user_id = localStorage.getItem('user_id');
+            const places = data.places.map(place => ({
+                id: place.ID,
+                details: place
+            }));
+            const restaurants = data.restaurants.map(restaurant => ({
+                id: restaurant.ID,
+                details: restaurant
+            }));
+            const hotels = data.hotels.map(hotel => ({
+                id: hotel.ID,
+                details: hotel
+            }));
+
+            fetch('{{ route('save_recommendations') }}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                },
+                body: JSON.stringify({
+                    user_id: user_id,
+                    places: places,
+                    restaurants: restaurants,
+                    hotels: hotels
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Save success:', data);
+            })
+            .catch((error) => {
+                console.error('Save error:', error);
+            });
+        }
+
+            
             function displayRecommendations(data) {
                 // Clear previous data
                 document.getElementById('placesList').innerHTML = '';
@@ -144,6 +183,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title">${place.Place}</h5>
                                         <p class="card-text">
+                                            <strong>ID:</strong> ${place.ID}<br>
                                             <strong>Type:</strong> ${place.Type}<br>
                                             <strong>Rating:</strong> ${place.Rating}<br>
                                             <strong>Popularity:</strong> ${place.Popularity}<br>
@@ -171,6 +211,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title">${restaurant.Place}</h5>
                                         <p class="card-text">
+                                            <strong>ID:</strong> ${restaurant.ID}<br>
                                             <strong>Food:</strong> ${restaurant.Food}<br>
                                             <strong>Rating:</strong> ${restaurant.Rating}<br>
                                             <strong>Popularity:</strong> ${restaurant.Popularity}<br>
@@ -198,6 +239,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title">${hotel.Hotels}</h5>
                                         <p class="card-text">
+                                            <strong>ID:</strong> ${hotel.ID}<br>
                                             <strong>Type:</strong> ${hotel.Type}<br>
                                             <strong>Rating:</strong> ${hotel.Rating}<br>
                                             <strong>Popularity:</strong> ${hotel.Popularity}<br>
