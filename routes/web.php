@@ -8,6 +8,7 @@ use App\Http\Controllers\Services\tourist_placesController;
 use App\Http\Controllers\Services\RecommendedController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use app\Http\Middleware\Admin;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +28,7 @@ Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/home', [HomeController::class, 'index'])->name('index');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/hotels', [HotelController::class, 'getdetails'])->name('hotels');
-Route::post('/hotels/Content/{Hotel_id}', [HotelController::class, 'gethotel']);
+Route::get('/hotels/Content/{Hotel_id}', [HotelController::class, 'gethotel']);
 Route::get('/ourplans', [ourplansController::class, 'getdetail'])->name('ourplans');
 Route::get('/restaurants', [RestaurantsController::class, 'getdetails'])->name('restaurants');
 Route::post('/restaurants/Content/{restaurants_id}', [RestaurantsController::class, 'getrestaurants']);
@@ -39,7 +40,7 @@ Route::post('/save_recommendations', [RecommendedController::class, 'saveRecomme
 Route::post('/Recommended', [RecommendedController::class, 'getRecommended'])->name('Recommended');
 
 ########################### admin side ####################################
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth' ,'Admin'])->group(function () {
     Route::get('/admin/home', [HomeController::class, 'adminhome'])->name('adminhome');
 
     Route::get('/admin/restaurant/view',[RestaurantsController::class,'adminview']);
