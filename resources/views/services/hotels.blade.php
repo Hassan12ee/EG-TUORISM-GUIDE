@@ -3,9 +3,9 @@
 
 <section >
     <div class="container">
-      
 
-      
+
+
        <div class="headline d-flex text-centre ">
           <h1>Hotels</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, maxime.</p>

@@ -21,4 +21,8 @@ class restaurant extends Model
         ];
 
         public $timestamps = false;
+        public function img_restaurant()
+        {
+            return $this->hasMany(img_restaurant::class, 'restaurant_id', 'ID');
+        }
 }

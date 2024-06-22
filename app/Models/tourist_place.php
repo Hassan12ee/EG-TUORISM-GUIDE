@@ -25,4 +25,8 @@ class tourist_place extends Model
         'Indoor_Outdoor',
     ];
     public $timestamps = false;
+    public function img_tourist_place()
+    {
+        return $this->hasMany(img_tourist_place::class, 'tourist_place_id', 'ID');
+    }
 }

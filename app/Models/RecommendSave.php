@@ -15,7 +15,8 @@ class RecommendSave extends Model
         'tourist_places_id',
         'hotels_id',
     ];
+    public $timestamps=false;
 
     // Specify the table if it doesn't follow the default naming convention
-    protected $table = 'recommendsaves';
+    protected $table = 'recommendsave';
 }
