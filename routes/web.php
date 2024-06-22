@@ -8,6 +8,7 @@ use App\Http\Controllers\Services\tourist_placesController;
 use App\Http\Controllers\Services\RecommendedController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use app\Http\Middleware\Admin;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,7 +40,7 @@ Route::post('/save_recommendations', [RecommendedController::class, 'saveRecomme
 Route::post('/Recommended', [RecommendedController::class, 'getRecommended'])->name('Recommended');
 
 ########################### admin side ####################################
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth' ,'Admin'])->group(function () {
     Route::get('/admin/home', [HomeController::class, 'adminhome'])->name('adminhome');
 
     Route::get('/admin/restaurant/view',[RestaurantsController::class,'adminview']);

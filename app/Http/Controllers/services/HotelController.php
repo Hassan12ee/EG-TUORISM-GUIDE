@@ -125,7 +125,7 @@ class HotelController extends Controller
             return redirect()->back();
 
         //update data
-        
+
         $offer->update($request->all());
 
         return redirect()->back()->with(['success' => ' تم التحديث بنجاح ']);
