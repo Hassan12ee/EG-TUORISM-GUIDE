@@ -107,12 +107,12 @@
                 const value = Object.fromEntries(data.entries());
                 delete value._token;
 
-                fetch('http://localhost:8080/get_recommendations', {
-                                
+                fetch('https://airecommendation.onrender.com/get_recommendations', {
+
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                       
+
                     },
                     body: JSON.stringify(value)
                 })
@@ -165,7 +165,7 @@
             });
         }
 
-            
+
             function displayRecommendations(data) {
                 // Clear previous data
                 document.getElementById('placesList').innerHTML = '';

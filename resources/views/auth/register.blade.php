@@ -59,9 +59,9 @@
                         </div>
                         <div class="offset-1 col-md-10">
                             <div class="form-floating">
-                                <input type="password" name="password" class=" bg-transparent text-light form-control @error('password') is-invalid @enderror" id="Password" required autocomplete="new-password">
-                                <label class="text-light" for="Password">Password</label>
-                                @error('Password')
+                                <input type="password" name="password" class=" bg-transparent text-light form-control @error('password') is-invalid @enderror" id="password" required autocomplete="new-password">
+                                <label class="text-light" for="password">Password</label>
+                                @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>

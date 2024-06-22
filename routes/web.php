@@ -8,7 +8,7 @@ use App\Http\Controllers\Services\tourist_placesController;
 use App\Http\Controllers\Services\RecommendedController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use app\Http\Middleware\Admin;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -35,9 +35,9 @@ Route::get('/restaurants/Content/{restaurants_id}', [RestaurantsController::clas
 Route::get('/restaurants/plan/{restaurants_id}', [RestaurantsController::class, 'getrestaurants']);
 Route::get('/Tourplaces', [tourist_placesController::class, 'getdetails'])->name('Tourplaces');
 Route::get('/Tourplaces/Content/{Tourplaces_id}',[tourist_placesController::class, 'gettourist_places']);
-Route::get('/Recommended', [RecommendedController::class, 'getRecommended'])->name('Recommended');
+Route::get('/Recommended', [RecommendedController::class, 'getRecommended'])->name('Recommended')->middleware('auth');
 Route::post('/save_recommendations', [RecommendedController::class, 'saveRecommendations'])->name('save_recommendations');
-Route::post('/Recommended', [RecommendedController::class, 'getRecommended'])->name('Recommended');
+Route::post('/Recommended', [RecommendedController::class, 'getRecommended'])->name('Recommended')->middleware('auth');
 
 ########################### admin side ####################################
 Route::middleware(['auth' ,'Admin'])->group(function () {
