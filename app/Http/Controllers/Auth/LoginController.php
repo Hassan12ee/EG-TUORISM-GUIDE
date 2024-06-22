@@ -23,6 +23,14 @@ class LoginController extends Controller
         $field = filter_var($value, FILTER_VALIDATE_EMAIL) ? 'email' : 'user';
         request()->merge([$field => $value]);
         return $field;
+
+    }
+    protected function validateLogin(Request $request)
+    {
+        $request->validate([
+            $this->username() => 'required|string',
+            'password' => 'required|string',
+        ]);
     }
 
     protected function authenticated(Request $request, $user)
