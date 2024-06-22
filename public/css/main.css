@@ -126,6 +126,9 @@
     right: 0;
     z-index: 999;
 }
+.mini-big-font{
+  font-size: 45px;
+}
 .big-font
 {
 font-size: 62px;
@@ -175,6 +178,12 @@ font-size: 62px;
 
 
 
+}
+.zz{
+  background-color: rgba(0, 0, 0, 0.233);
+}
+.zzz{
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 /* --------------------------for about------------------------------- */
@@ -593,4 +602,127 @@ background-color: #3C81C3;
 /*---------------------------------------------------------*/
 
 /* -------------------------slide bar---------------------------------- */
+/*------------------------------ ROOM INFO------------------------------------*/
 
+.amen {
+  margin-top: 30px;
+}
+
+.amenity-card {
+  background-color: #fff;
+  border: none;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.amenity-card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.amenity-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #337ab7;
+}
+
+.amenity-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.amenity-category {
+  font-size: 14px;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/*--------------- hotel info ---------------*/
+.hotel-box {
+  
+  background-color: #f7f7f7;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-box h2 {
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.hotel-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hotel-box li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.hotel-box li:last-child {
+  border-bottom: none;
+}
+/*-------------------- admin page dashboard -----------------*/
+.menu {
+background-color: #123;
+width:60px;
+height:100vh ;
+
+overflow: hidden;
+transition: all 0.5s;
+}
+ .menu:hover{
+  width: 260px;
+} 
+ .ull {
+  list-style:none;
+  width:100% ;
+  height: 95%;
+}
+
+.ull li  a {
+text-decoration: none;
+border-radius: 8px ;
+display: flex;
+align-items:  center ;
+transition: 0.5s ;
+}
+.ull li  a:hover {
+background-color: #ffffff55;
+}
+.ull p {
+  text-align: center;
+  margin-left: 30px;
+}
+
+.hzz {
+font-size: 18px;
+margin-bottom: 40px;
+}
+/*-----------------login */
+.csz{
+ background-image:url(../img/file_2024-02-28_00.39.19.png) ; 
+ background-repeat: no-repeat;
+ background-position: 50% 50%;
+ background-size: cover;
+ height: 100vh;
+}
+.form-floating>.form-control-plaintext~label::after, .form-floating>.form-control:focus~label::after, .form-floating>.form-control:not(:placeholder-shown)~label::after, .form-floating>.form-select~label::after {
+  position: absolute;
+  inset: 1rem 0.375rem;
+  z-index: -1;
+  height: 1.5em;
+  content: "";
+  background-color: transparent;
+  border-radius: var(--bs-border-radius);
+}

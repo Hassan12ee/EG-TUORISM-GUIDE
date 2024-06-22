@@ -37,3 +37,18 @@ app.component('example-component', ExampleComponent);
  */
 
 app.mount('#app');
+
+let CartItem = document.querySelector(".cart")
+let CarsData = document.querySelector(".cars")
+let cars = []
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+
+
+
+function addToCart(index){
+let choosencard =  cars[index]
+console.log(choosencard);
+
+}

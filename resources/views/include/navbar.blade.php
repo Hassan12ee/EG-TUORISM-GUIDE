@@ -13,10 +13,10 @@
     <!-- Scripts -->
 
 
-
+<link rel="stylesheet" href="{{ URL::asset('css/main.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}">
+    
 </head>
 <body class="poppins-medium w-100">
 

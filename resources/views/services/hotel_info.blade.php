@@ -2,12 +2,13 @@
 
 
 @section('content')
+
     <div class="container">
         <div class="row mt-3">
 
             <h1 class="mb-3">{{ $hotel_info->Hotels }}</h1>
 
-            <div class="col-sm-12 col-md-12   d-flex justify-content-between mb-3">
+            <div class="col-sm-12 col-md-12 d-flex justify-content-between mb-3">
 
                     <span class="badge text-bg-c fs-6">{{ $hotel_info->Region }}</span>       <i class="fa-regular fa-heart fa-xl color1"></i>
                 </div>
@@ -19,53 +20,107 @@
             <div class="col-sm-12 col-md-12  ">
                 <div class="row g-0  rounded rounded-5 overflow-hidden">
 
-                    <div class="col-md-4"><img class="w-100 h-100" src="{{ URL::asset($hotel_info->imgpath) }}"
+                    <div class="col-md-4 p-1"><img class="w-100 h-100 " src="{{ URL::asset($hotel_info->imgpath) }}"
                             alt=""></div>
-                    <div class="col-md-4"><img class="w-100 h-100" src="{{ URL::asset('img/273680842.jpg') }}"
+                    <div class="col-md-4 p-1"><img class="w-100 h-100 " src="{{ URL::asset('img/273680842.jpg') }}"
                             alt=""></div>
-                    <div class="col-md-4"><img class="w-100 h-100" src="{{ URL::asset('img/273680842.jpg') }}"
+                    <div class="col-md-4 p-1"><img class="w-100 h-100" src="{{ URL::asset('img/273680842.jpg') }}"
                             alt=""></div>
-                    <div class="col-md-4"><img class="w-100 h-100" src="{{ URL::asset('img/273680842.jpg') }}"
+                    <div class="col-md-4 p-1"><img class="w-100 h-100" src="{{ URL::asset('img/273680842.jpg') }}"
                             alt=""></div>
-                    <div class="col-md-4"><img class="w-100 h-100" src="{{ URL::asset('img/273680842.jpg') }}"
+                    <div class="col-md-4 p-1"><img class="w-100 h-100" src="{{ URL::asset('img/273680842.jpg') }}"
                             alt=""></div>
-                    <div class="col-md-4"><img class="w-100 h-100" src="{{ URL::asset('img/273680842.jpg') }}"
+                    <div class="col-md-4 p-1"><img class="w-100 h-100" src="{{ URL::asset('img/273680842.jpg') }}"
                             alt=""></div>
                 </div>
             </div>
 
 
 
-            <div class="row mb-3 mt-3">
-                <div class="col-md-6"><span class="fa-solid fa-clock me-3"></span>{{ $hotel_info->Opening_Hours }}
+            <div class="container ">
+       <div class="amen">   
+       <div class="row ">
+        <h1 class="hzz poppins-black">
+            . Room features
+        </h1>
+            <div class="col-md-3">
+                <div class="amenity-card">
+                    <i class="amenity-icon fas fa-clock"></i>
+                    <p class="amenity-category">Opening Hours</p>
+                    <p class="amenity-text">{{ $hotel_info->Opening_Hours }}</p>
                 </div>
-                <div class="col-md-6"><label class="fa-solid fa-clock me-3">Type:</label> {{ $hotel_info->Type }}
-                </div>
-
-                <div class="col-md-6"><label class="fa-solid fa-clock me-3">Rating:</label>{{ $hotel_info->Rating }}
-                </div>
-                <div class="col-md-6"><label class="fa-solid fa-clock me-3">Budget:</label>{{ $hotel_info->Budget }}
-                </div>
-                <div class="col-md-6"><label
-                        class="fa-solid fa-clock me-3">Facilities:</label>{{ $hotel_info->Facilities }}</div>
-
             </div>
+            <div class="col-md-3">
+                <div class="amenity-card">
+                    <i class="amenity-icon fas fa-dollar-sign"></i>
+                    <p class="amenity-category">Type</p>
+                    <p class="amenity-text">{{ $hotel_info->Type }}
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="amenity-card">
+                    <i class="amenity-icon fas fa-star"></i>
+                    <p class="amenity-category">Rating</p>
+                    <p class="amenity-text">{{ $hotel_info->Rating }}
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="amenity-card">
+                    <i class="amenity-icon fas fa-sack-dollar"></i>
+                    <p class="amenity-category">Budget</p>
+                    <p class="amenity-text">{{ $hotel_info->Budget }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="amenity-card">
+                    <i class="amenity-icon fas fa-spa"></i>
+                    <p class="amenity-category">relaxation</p>
+                    <p class="amenity-text"> Spa</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="amenity-card">
+                    <i class="amenity-icon fas fa-person-swimming"></i>
+                    <p class="amenity-category">Swimming</p>
+                    <p class="amenity-text">pool</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="amenity-card">
+                    <i class="amenity-icon fas fa-dumbbell"></i>
+                    <p class="amenity-category">Body Building</p>
+                    <p class="amenity-text">Gym</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="amenity-card">
+                    <i class="amenity-icon fas fa-utensils"></i>
+                    <p class="amenity-category">Food</p>
+                    <p class="amenity-text">Restaurant</p>
+                </div>
+            </div>
+        </div>
+     
+       </div>
+    </div>
+
+            
 
 
             <div class="col-md-12">
 
 
 
+            <div class="hotel-box mb-4 mt-4">
+  <h2>Hotel Paradise</h2>
+  <p>Located on the beachfront, Hotel Paradise offers stunning views of the ocean and luxurious amenities to make your stay unforgettable.</p>
 
-                <h1></h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo eligendi fuga saepe, asperiores soluta
-                    magni error deleniti quas, at assumenda veritatis officia reprehenderit? Vitae excepturi ipsam officia
-                    incidunt optio ad ut dignissimos, eligendi quam, facilis neque blanditiis qui magni. Porro cum tempore
-                    tenetur explicabo facere nobis deleniti saepe ullam labore, rerum eaque sit optio accusantium nihil
-                    inventore incidunt, architecto ad error dolores officiis magnam culpa mollitia reiciendis vitae? Nisi
-                    quae asperiores ipsa quaerat neque aliquam magnam culpa sunt ratione eaque itaque nihil, expedita maxime
-                    totam harum ducimus cupiditate iste aperiam ipsam aut molestias. Tempore asperiores, qui ex eveniet sunt
-                    repellendus.</p>
+</div>
 
 
 
