@@ -41,12 +41,12 @@ return [
         ],
     ],
 
-    'guards' => [
-        'admin' => [
-            'driver' => 'session',
-            'provider' => 'users',
-        ],
-    ],
+    // 'guards' => [
+    //     'admin' => [
+    //         'driver' => 'session',
+    //         'provider' => 'users',
+    //     ],
+    // ],
 
     /*
     |--------------------------------------------------------------------------

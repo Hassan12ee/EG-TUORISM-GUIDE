@@ -2,7 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use app\http\Controllers\api;
+use App\http\Controllers\api;
+use App\Http\Controllers\api\HotelController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,3 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 // Route::get('/Recommended', [App\Http\Controllers\api\RecommendedController::class, 'index']);
+Route::get('/hotels',[HotelController::class, 'index']);
