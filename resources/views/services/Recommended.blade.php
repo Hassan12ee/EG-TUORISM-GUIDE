@@ -107,7 +107,7 @@
                 const value = Object.fromEntries(data.entries());
                 delete value._token;
 
-                fetch('https://airecommendation.onrender.com/get_recommendations', {
+                fetch('http://localhost:8080/get_recommendations', {
 
                     method: 'POST',
                     headers: {
