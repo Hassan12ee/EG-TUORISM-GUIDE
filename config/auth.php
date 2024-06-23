@@ -34,23 +34,13 @@ return [
     | Supported: "session"
     |
     */
+
     'guards' => [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
         ],
     ],
-
-<<<<<<< Updated upstream
-    // 'guards' => [
-    //     'admin' => [
-    //         'driver' => 'session',
-    //         'provider' => 'users',
-    //     ],
-    // ],
-=======
- 
->>>>>>> Stashed changes
 
     /*
     |--------------------------------------------------------------------------
@@ -75,6 +65,7 @@ return [
             'model' => App\Models\User::class,
         ],
 
+        // If you use a database driver instead of eloquent, uncomment and adjust as needed
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
