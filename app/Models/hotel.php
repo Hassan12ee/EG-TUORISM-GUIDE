@@ -39,4 +39,8 @@ class hotel extends Model
         {
             return $this->belongsToMany(user::class, 'users_hotels', 'user_id', 'hotel_id');
         }
+        public function fevusers(): BelongsToMany
+        {
+            return $this->belongsToMany(user::class, 'fev_hotels', 'user_id', 'hotels_id');
+        }
 }

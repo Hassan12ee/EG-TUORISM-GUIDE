@@ -64,4 +64,16 @@ class User extends Authenticatable
         {
             return $this->belongsToMany(restaurant::class, 'users_restaurants','restaurants_id','user_id');
         }
+        public function fevhotel(): BelongsToMany
+        {
+            return $this->belongsToMany(hotel::class, 'fev_hotels', 'hotels_id','user_id', );
+        }
+        public function fevtourist_place(): BelongsToMany
+        {
+            return $this->belongsToMany(tourist_place::class, 'fev_tourist_places','tourist_places_id','user_id');
+        }
+        public function fevrestaurant(): BelongsToMany
+        {
+            return $this->belongsToMany(restaurant::class, 'fev_restaurants','restaurants_id','user_id');
+        }
 }

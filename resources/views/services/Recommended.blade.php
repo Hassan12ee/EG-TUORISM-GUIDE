@@ -89,6 +89,7 @@
                         <div id="hotelsList" class="row"></div>
                     </div>
                     <div class="modal-footer">
+                        <a href="">save</a>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -130,30 +131,20 @@
 
             function saveRecommendations(data) {
             const user_id = localStorage.getItem('user_id');
-            const places = data.places.map(place => ({
-                id: place.ID,
-                details: place
-            }));
-            const restaurants = data.restaurants.map(restaurant => ({
-                id: restaurant.ID,
-                details: restaurant
-            }));
-            const hotels = data.hotels.map(hotel => ({
-                id: hotel.ID,
-                details: hotel
-            }));
-
-            fetch('{{ route('save_recommendations') }}', {
+            const places = data.places;
+            const restaurants = data.restaurants;
+            const hotels = data.hotels;
+            fetch('{{ url("save_recommendations" ) }}', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                     'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
                 },
                 body: JSON.stringify({
-                    user_id: user_id,
-                    places: places,
-                    restaurants: restaurants,
-                    hotels: hotels
+                    user_id,
+                    places,
+                    restaurants,
+                    hotels
                 })
             })
             .then(response => response.json())
@@ -164,6 +155,50 @@
                 console.error('Save error:', error);
             });
         }
+
+
+//             function saveRecommendations(data) {
+//                      const user_id = localStorage.getItem('user_id');
+//             const places = data.places.map(place => ({
+//                 id: place.ID,
+//                 details: place
+//             }));
+//             const restaurants = data.restaurants.map(restaurant => ({
+//                 id: restaurant.ID,
+//                 details: restaurant
+//             }));
+//             const hotels = data.hotels.map(hotel => ({
+//                 id: hotel.ID,
+//                 details: hotel
+//             }));
+
+
+//     $.ajax({
+//         type: 'post',
+//         enctype: 'multipart/form-data',
+//         url: "{{route('save_recommendations')}}",
+//         data: places,user_id,hotels,restaurants,
+//         processData: false,
+//         contentType: false,
+//         cache: false,
+//         success: function (data) {
+
+//             if (data.status == true) {
+//                 $('#success_msg').show();
+//             }
+
+
+//         }, error: function (reject) {
+//             var response = $.parseJSON(reject.responseText);
+//             $.each(response.errors, function (key, val) {
+//                 $("#" + key + "_error").text(val[0]);
+//             });
+//         }
+//     });
+// };
+
+
+
 
 
             function displayRecommendations(data) {

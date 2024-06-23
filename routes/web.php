@@ -37,7 +37,7 @@ Route::get('/Tourplaces', [tourist_placesController::class, 'getdetails'])->name
 Route::get('/Tourplaces/Content/{Tourplaces_id}',[tourist_placesController::class, 'gettourist_places']);
 Route::get('/Recommended', [RecommendedController::class, 'getRecommended'])->name('Recommended')->middleware('auth');
 Route::post('/save_recommendations', [RecommendedController::class, 'recommendSave'])->name('save_recommendations');
-
+Route::get('hotels/plan/{id}',[HotelController::class, ''])->middleware('auth');
 
 ########################### admin side ####################################
 Route::middleware(['auth' ,'Admin'])->group(function () {

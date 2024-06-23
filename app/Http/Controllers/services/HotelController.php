@@ -47,7 +47,7 @@ class HotelController extends Controller
 
     public function gethotel($hotel_id)
     {
-        $exit= hotel::find($hotel_id);
+        $exit= hotel::with('')find($hotel_id);
         if(!$exit)
         return redirect() ->back();
 
@@ -115,6 +115,7 @@ class HotelController extends Controller
         return view('admin.hotels_update', compact('view'));
 
     }
+
     public function Update(Hotelrequest $request, $offer_id)
     {
         // validtion
@@ -132,4 +133,5 @@ class HotelController extends Controller
 
 
     }
+
 }
