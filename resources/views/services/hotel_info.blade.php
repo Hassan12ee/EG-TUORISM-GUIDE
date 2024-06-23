@@ -19,26 +19,18 @@
 
             <div class="col-sm-12 col-md-12  ">
                 <div class="row g-0  rounded rounded-5 overflow-hidden">
+                    @foreach ($img as $img)
 
-                    <div class="col-md-4 p-1"><img class="w-100 h-100 " src="{{ URL::asset($hotel_info->imgpath) }}"
+                    <div class="col-md-4 p-1"><img class="w-100 h-100 " src="{{ URL::asset('img/Hotels/'.$img-> imgpath )}}"
                             alt=""></div>
-                    <div class="col-md-4 p-1"><img class="w-100 h-100 " src="{{ URL::asset('img/273680842.jpg') }}"
-                            alt=""></div>
-                    <div class="col-md-4 p-1"><img class="w-100 h-100" src="{{ URL::asset('img/273680842.jpg') }}"
-                            alt=""></div>
-                    <div class="col-md-4 p-1"><img class="w-100 h-100" src="{{ URL::asset('img/273680842.jpg') }}"
-                            alt=""></div>
-                    <div class="col-md-4 p-1"><img class="w-100 h-100" src="{{ URL::asset('img/273680842.jpg') }}"
-                            alt=""></div>
-                    <div class="col-md-4 p-1"><img class="w-100 h-100" src="{{ URL::asset('img/273680842.jpg') }}"
-                            alt=""></div>
+@endforeach
                 </div>
             </div>
 
 
 
             <div class="container ">
-       <div class="amen">   
+       <div class="amen">
        <div class="row ">
         <h1 class="hzz poppins-black">
             . Room features
@@ -105,11 +97,11 @@
                 </div>
             </div>
         </div>
-     
+
        </div>
     </div>
 
-            
+
 
 
             <div class="col-md-12">

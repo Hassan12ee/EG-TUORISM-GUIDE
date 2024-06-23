@@ -47,9 +47,11 @@ class HotelController extends Controller
 
     public function gethotel($hotel_id)
     {
-        $exit= hotel::with('')find($hotel_id);
-        if(!$exit)
+        $exit= hotel::with('img_hotel')->find($hotel_id);
+
+                if(!$exit)
         return redirect() ->back();
+
 
         $hotel_info = hotel::select(
         'ID',
@@ -62,7 +64,8 @@ class HotelController extends Controller
         'Budget',
         'Facilities',
         'imgpath','details',) ->find($hotel_id);
-        return view('services.hotel_info',compact(var_name:'hotel_info')) ;
+        $img =$exit->img_hotel;
+        return view('services.hotel_info',compact(var_name:'hotel_info'),compact(var_name:'img')) ;
 
     }
     public function viewadmin()
