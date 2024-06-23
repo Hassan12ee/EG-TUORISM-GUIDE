@@ -125,27 +125,28 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <h4>About Us</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique velit a dui tristique,
-                        nec viverra lorem eleifend.</p>
-                </div>
-                <div class="col-md-3">
-                    <h4>Quick Links</h4>
-                    <div class="row">
-                        <div class="col-md-4" ><a href="{{ route('index') }}">Home</a></div>
-                        <div class="col-md-4" ><a href="{{ route('Tourplaces') }}">Tour places</a></div>
-                        <div class="col-md-4" ><a href="{{ route('hotels') }}">Hotels</a></div>
-                        <div class="col-md-4" ><a href="{{ route('restaurants') }}">Restaurants</a></div>
-                        <div class="col-md-4" ><a href="{{ route('ourplans') }}">Our plans</a></div>
-                        <div class="col-md-4" ><a href="{{ route('ourplans') }}">Activities</a></div>
-                    </div>
-
-                </div>
-                <div class="col-md-3">
-                    <h4>Contact Us</h4>
-                    <p>Email: hassan123.hhnn@gmail.com<br>Phone: 01013056706</p>
-                </div>
+            <div class="col-md-4 col-sm-6">
+        <h5>About Us</h5>
+        <p>we believe that travel has the power to break down cultural barriers, foster understanding, and create lasting memories. Our vision is to inspire and empower travelers to explore new destinations, try new experiences, and connect with local communities. We strive to be the go-to resource for travelers, providing them with the tools and information they need to plan their perfect trip</p>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="{{ route('index') }}">Home</a></li>
+          <li><a href="{{ route('restaurants') }}">Restaurants</a></li>
+          <li><a href="{{ route('Tourplaces') }}">Tour places</a></li>
+          <li><a href="{{ route('ourplans') }}">Our plans</a></li>
+          <li><a href="{{ route('hotels') }}">Hotels</a></li>
+          <li><a href="#">Admin</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <h5>Contact Us</h5>
+                    
+        <p>Email:hassan123.hhnn@gmail.com<br>Phone: 01013056706</p>
+      </div>
+      
+  </div>
             </div>
         </div>
     </footer>

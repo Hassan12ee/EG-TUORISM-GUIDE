@@ -41,12 +41,16 @@ return [
         ],
     ],
 
+<<<<<<< Updated upstream
     // 'guards' => [
     //     'admin' => [
     //         'driver' => 'session',
     //         'provider' => 'users',
     //     ],
     // ],
+=======
+ 
+>>>>>>> Stashed changes
 
     /*
     |--------------------------------------------------------------------------

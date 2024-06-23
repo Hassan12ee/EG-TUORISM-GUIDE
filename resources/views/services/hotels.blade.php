@@ -14,7 +14,7 @@
 
        <div class="row">
         @foreach ($view as $views)
-        <div class=" col-md-6  ">
+        <div class=" col-lg-6  ">
         <div class="card mb-3 ">
             <div class="row g-0">
               <div class="col-md-5 img-con">
