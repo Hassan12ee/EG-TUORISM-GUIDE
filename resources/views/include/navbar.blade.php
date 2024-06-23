@@ -1,4 +1,4 @@
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/all.min.css') }}">
-    
+
 </head>
 <body class="poppins-medium w-100">
 
@@ -63,27 +63,7 @@
 
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    admin
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            admin
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="{{ route('adminhome') }}">home</a></li>
-                                            <li><a class="dropdown-item" href="{{ route('hotels') }}">Contact us</a></li>
-
-                                        </ul>
-                                    </li></li>
-                                    <li><a class="dropdown-item" href="{{ route('hotels') }}">Contact us</a></li>
-
-                                </ul>
-                            </li>
+                            
                         </ul>
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent1">

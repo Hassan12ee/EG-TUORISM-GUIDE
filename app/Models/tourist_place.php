@@ -29,4 +29,8 @@ class tourist_place extends Model
     {
         return $this->hasMany(img_tourist_place::class, 'tourist_place_id', 'ID');
     }
+    public function users(): BelongsToMany
+        {
+            return $this->belongsToMany(user::class, 'users_tourist_places', 'user_id', 'tourist_place_id');
+        }
 }

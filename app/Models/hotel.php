@@ -35,4 +35,8 @@ class hotel extends Model
     {
         return $this->hasMany(img_hotel::class, 'hotel_id', 'ID');
     }
+    public function users(): BelongsToMany
+        {
+            return $this->belongsToMany(user::class, 'users_hotels', 'user_id', 'hotel_id');
+        }
 }

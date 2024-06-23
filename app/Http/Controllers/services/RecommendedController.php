@@ -15,35 +15,45 @@ class RecommendedController extends Controller
 
     public function recommendSave(Request $request)
     {
-        // Validate the incoming request
+        // Validate incoming request
         $request->validate([
             'user_id' => 'required|integer',
-            'places' => 'required|array',
-            'restaurants' => 'required|array',
-            'hotels' => 'required|array',
+            'places' => 'nullable|array',
+            'restaurants' => 'nullable|array',
+            'hotels' => 'nullable|array',
         ]);
+        try {
+        // Extract data from the request
+        $user_id = $request->input('user_id');
+        $places = $request->input('places', []);
+        $restaurants = $request->input('restaurants', []);
+        $hotels = $request->input('hotels', []);
 
-        foreach ($request->places as $place) {
-            $recommendSave = new RecommendSave();
-            $recommendSave->user_id = $request->user_id;
-            $recommendSave->tourist_places_id = json_encode($place['details']);  // Save the full details
-            $recommendSave->save();
+        foreach ($hotels as $hotelsData) {
+            users_hotels::create([
+                'hotel_id'=> $hotelsData['id'],
+                'user_id'=> $user_id,
+
+            ]);}
+        foreach ($restaurants as $restaurantsData) {
+            users_restaurants::create([
+                'restaurant_id'=> $restaurantsData['id'],
+                'user_id'=> $user_id,
+
+            ]);}
+        foreach ($places as $placeData) {
+            users_tourist_places::create([
+                'tourist_place_id'=> $placeData['id'],
+                'user_id'=> $user_id,
+
+            ]);
         }
 
-        foreach ($request->restaurants as $restaurant) {
-            $recommendSave = new RecommendSave();
-            $recommendSave->user_id = $request->user_id;
-            $recommendSave->restaurants_id = json_encode($restaurant['details']);  // Save the full details
-            $recommendSave->save();
-        }
-
-        foreach ($request->hotels as $hotel) {
-            $recommendSave = new RecommendSave();
-            $recommendSave->user_id = $request->user_id;
-            $recommendSave->hotels_id = json_encode($hotel['details']);  // Save the full details
-            $recommendSave->save();
-        }
 
         return response()->json(['message' => 'Recommendations saved successfully']);
-    }
+    } catch (\Exception $e) {
+        // Log the exception or handle it appropriately
+        return response()->json(['error' => 'Something went wrong. Please try again later.'], 500);
+    }}
+
 }
